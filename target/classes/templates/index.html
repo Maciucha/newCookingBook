@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="template :: head(title = 'Przepisy')"><title>Przepisy</title></head>
+
+<body>
+
+<!-- Splash Screen
+================== -->
+<div id="splash"></div>
+
+    <th:block th:replace="template :: logo" />
+
+    <th:block th:replace="template :: categories" />
+    <th:block th:replace="template :: recipes" />
+<ul>
+    <li th:each="recipe : ${recipes}" th:text="${recipe.name}"></li>
+</ul>
+    <th:block th:replace="template :: footer" />
+<!-- JavaScript files
+===================== -->
+<script charset="utf-8" src="/js/jquery-3.3.1.min.js"></script>
+<script charset="utf-8" src="/js/bootstrap.min.js"></script>
+<script charset="utf-8" src="/js/wow.min.js"></script>
+<script charset="utf-8" src="/js/scripts.js"></script>
+</body>
+
+</html>

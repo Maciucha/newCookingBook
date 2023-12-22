@@ -1,0 +1,9 @@
+pl\tazz\coockingbook\recipe\controller\RecipeViewController.class
+pl\tazz\coockingbook\recipe\controller\RecipeApiController.class
+pl\tazz\coockingbook\recipe\domain\Recipe.class
+pl\tazz\coockingbook\recipe\domain\Comment.class
+pl\tazz\coockingbook\recipe\service\RecipeService.class
+pl\tazz\coockingbook\recipe\controller\CommentController.class
+pl\tazz\coockingbook\CoockingBookConfiguration.class
+pl\tazz\coockingbook\recipe\service\CommentService.class
+pl\tazz\coockingbook\CoockingBookApplication.class
