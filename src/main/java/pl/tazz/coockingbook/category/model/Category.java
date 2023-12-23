@@ -1,17 +1,17 @@
-package pl.tazz.coockingbook.recipe.domain;
+package pl.tazz.coockingbook.category.model;
 
 import java.util.UUID;
 
-public class Recipe {
+public class Category {
 
 
     private UUID id;
     private String name;
 
-    public Recipe() {
+    public Category() {
     }
 
-    public Recipe(String name) {
+    public Category(String name) {
         this.name = name;
         this.id = UUID.randomUUID();
     }
@@ -34,10 +34,9 @@ public class Recipe {
 
     @Override
     public String toString() {
-        return "Recipe{" +
+        return "Category{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 '}';
     }
 }
-

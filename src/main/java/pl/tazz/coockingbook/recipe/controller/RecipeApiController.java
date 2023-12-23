@@ -12,24 +12,6 @@ import java.util.UUID;
 @RequestMapping("api/v1/recipes")
 public class RecipeApiController {
 
-    /**
-     * CRUD - dobra praktyka z mapowaniem
-     * <p>
-     * Create
-     * POST /recipes
-     * <p>
-     * Read
-     * GET /recipes - all
-     * GET /recipes/[id] - wybrany
-     * <p>
-     * Update
-     * PUT /recipes/[id]
-     * <p>
-     * Delete
-     * DELETE /recipes/[id]
-     */
-
-
     private final RecipeService recipeService;
 
     public RecipeApiController(RecipeService recipeService) {
