@@ -1,7 +1,7 @@
 package pl.tazz.coockingbook.recipe.service;
 
 import org.springframework.stereotype.Service;
-import pl.tazz.coockingbook.recipe.domain.Recipe;
+import pl.tazz.coockingbook.recipe.model.Recipe;
 
 import java.util.Arrays;
 import java.util.List;

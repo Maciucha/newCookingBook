@@ -1,7 +1,7 @@
 package pl.tazz.coockingbook.recipe.service;
 
 import org.springframework.stereotype.Service;
-import pl.tazz.coockingbook.recipe.domain.Comment;
+import pl.tazz.coockingbook.recipe.model.Comment;
 
 import java.util.Arrays;
 import java.util.List;

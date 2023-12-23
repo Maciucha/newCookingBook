@@ -2,10 +2,8 @@ package pl.tazz.coockingbook.recipe.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-import pl.tazz.coockingbook.recipe.domain.Comment;
-import pl.tazz.coockingbook.recipe.domain.Recipe;
+import pl.tazz.coockingbook.recipe.model.Comment;
 import pl.tazz.coockingbook.recipe.service.CommentService;
-import pl.tazz.coockingbook.recipe.service.RecipeService;
 
 import java.util.List;
 import java.util.UUID;

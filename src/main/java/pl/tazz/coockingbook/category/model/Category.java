@@ -1,7 +1,10 @@
 package pl.tazz.coockingbook.category.model;
 
+import lombok.Getter;
+
 import java.util.UUID;
 
+@Getter
 public class Category {
 
 
@@ -16,16 +19,8 @@ public class Category {
         this.id = UUID.randomUUID();
     }
 
-    public String getName() {
-        return name;
-    }
-
     public void setName(String name) {
         this.name = name;
-    }
-
-    public UUID getId() {
-        return id;
     }
 
     public void setId(UUID id) {
