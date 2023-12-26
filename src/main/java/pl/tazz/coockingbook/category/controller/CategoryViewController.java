@@ -29,8 +29,8 @@ public class CategoryViewController {
     @GetMapping
     public String indexView(Model model) {
         model.addAttribute("categories", categoryService.getCategories());
-        return "template";
-        // return "/category/index";
+        // return "template";
+        return "/category/index";
 
     }
 
