@@ -20,7 +20,7 @@ public class RecipeViewController {
     private final RecipeService recipeService;
     private final CommentService commentService;
 
-    private final  CategoryService categoryService;
+    private final CategoryService categoryService;
 
 
     public RecipeViewController(RecipeService recipeService, CommentService commentService, CategoryService categoryService) {
@@ -35,8 +35,15 @@ public class RecipeViewController {
         model.addAttribute("categories", categoryService.getCategories());
         // return "template";
         return "/recipe/index";
-
     }
+
+    @GetMapping("template")
+    public String templateView(Model model) {
+        model.addAttribute("recipes", recipeService.getRecipes());
+        model.addAttribute("categories", categoryService.getCategories());
+        return "template";
+    }
+
 
     @GetMapping("{id}")
     public String singleView(Model model, @PathVariable UUID id) {

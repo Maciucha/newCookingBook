@@ -2,7 +2,7 @@ package pl.tazz.coockingbook.category.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-import pl.tazz.coockingbook.category.model.Category;
+import pl.tazz.coockingbook.category.domain.model.Category;
 import pl.tazz.coockingbook.category.service.CategoryService;
 
 import java.util.List;
@@ -31,7 +31,7 @@ public class CategoryApiController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     Category createCategory(@RequestBody Category category) {
-        return CategoryService.createCategory(category);
+        return categoryService.createCategory(category);
     }
 
     @PutMapping("{id}")

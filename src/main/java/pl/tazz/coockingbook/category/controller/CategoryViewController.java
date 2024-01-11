@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import pl.tazz.coockingbook.category.model.Category;
+import pl.tazz.coockingbook.category.domain.model.Category;
 
 import pl.tazz.coockingbook.category.service.CategoryService;
 import pl.tazz.coockingbook.recipe.service.CommentService;
@@ -51,7 +51,7 @@ public class CategoryViewController {
 
     @PostMapping
     public String add(Category category) {
-        CategoryService.createCategory(category);
+        categoryService.createCategory(category);
         return "redirect:/categories";
 
     }

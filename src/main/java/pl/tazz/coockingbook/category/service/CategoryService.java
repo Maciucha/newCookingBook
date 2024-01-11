@@ -1,42 +1,50 @@
 package pl.tazz.coockingbook.category.service;
 
 import org.springframework.stereotype.Service;
-import pl.tazz.coockingbook.category.model.Category;
+import pl.tazz.coockingbook.category.domain.model.Category;
+import pl.tazz.coockingbook.category.domain.repository.CategoryRepository;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;
+
 
 @Service
 public class CategoryService {
 
+    private final CategoryRepository categoryRepository;
 
-    public static Category createCategory(Category category) {
-        category.setId(UUID.randomUUID());
-        return category;
+    public CategoryService(CategoryRepository categoryRepository) {
+        this.categoryRepository = categoryRepository;
     }
 
     public List<Category> getCategories() {
-        return Arrays.asList(
-                new Category("Śniadania"),
-                new Category("Mięsne"),
-                new Category("Owoce morza"),
-                new Category("Przekąski"),
-                new Category("Na ostro"),
-                new Category("Wegetariańskie")
-        );
+        return categoryRepository.findAll();
     }
 
     public Category getCategory(UUID id) {
-        return new Category();
+        return categoryRepository.getReferenceById(id);
     }
 
-    public Category updateCategory(UUID id, Category category) {
-        return category;
+    public Category createCategory(Category categoryRequest) {
+        Category category = new Category();
+
+        category.setName(categoryRequest.getName());
+
+        return categoryRepository.save(category);
+    }
+
+    public Category updateCategory(UUID id, Category categoryRequest) {
+        Category category = categoryRepository.getById(id);
+
+        category.setName(categoryRequest.getName());
+
+        return categoryRepository.save(category);
     }
 
     public void deleteCategory(UUID id) {
-
+        categoryRepository.deleteById(id);
     }
 
 }
+
+
